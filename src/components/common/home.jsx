@@ -8,7 +8,8 @@ function Home() {
       style={{
         display: "flex",
         height: "98vh",
-        overflow: "hidden"
+        overflow: "hidden",
+        background:"#F8F9FD"
       }}
     >
       <SidebarComp /> {/* Sidebar Component */}
@@ -16,7 +17,9 @@ function Home() {
         style={{
           flex: 1,
           overflowY: "auto",
+          
         }}
+        
       >
         <Outlet /> {/* This renders the nested route component like AddSuppliers */}
       </div>

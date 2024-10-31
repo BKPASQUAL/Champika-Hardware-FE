@@ -22,40 +22,32 @@ function SidebarComp() {
   };
 
   useEffect(() => {
-    // Set initial theme based on user preference or default light theme
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
     document.body.setAttribute("data-theme", savedTheme);
   }, []);
 
   useEffect(() => {
-    // Save the theme to localStorage when it changes
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
-    <>
+    <div className="sidebar-container">
       <Sidebar
         collapsed={collapsed}
         width="200px"
         collapsedWidth="70px"
         transitionDuration={500}
-        className="sidebar"
+        className="sidebar 	"
       >
-        <div className="sidebar-log">
-          {/* <h1>CH</h1> */}
-        </div>
+        <div className="sidebar-log"></div>
         <Menu>
           <div className="sidebar-link">
             <MenuItem
               className={
                 selectedMenuItem === "Overview" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  home
-                </span>
-              }
+              icon={<span className="material-symbols-outlined sidebar-icon">home</span>}
               onClick={() => handleMenuItemClick("Overview")}
             >
               Overview
@@ -66,11 +58,7 @@ function SidebarComp() {
               className={
                 selectedMenuItem === "Products" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  add_box
-                </span>
-              }
+              icon={<span className="material-symbols-outlined sidebar-icon">add_box</span>}
               onClick={() => handleMenuItemClick("Products")}
             >
               Products
@@ -79,14 +67,10 @@ function SidebarComp() {
           <div className="sidebar-link">
             <MenuItem
               className={
-                selectedMenuItem === "Customers" ? "selected-menu-item" : ""
+                selectedMenuItem === "custormers" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  event_note
-                </span>
-              }
-              onClick={() => handleMenuItemClick("Customers")}
+              icon={<span className="material-symbols-outlined sidebar-icon">event_note</span>}
+              onClick={() => handleMenuItemClick("custormers")}
             >
               Customers
             </MenuItem>
@@ -96,11 +80,7 @@ function SidebarComp() {
               className={
                 selectedMenuItem === "inventory" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  inventory_2
-                </span>
-              }
+              icon={<span className="material-symbols-outlined sidebar-icon">inventory_2</span>}
               onClick={() => handleMenuItemClick("inventory")}
             >
               Inventory
@@ -111,11 +91,7 @@ function SidebarComp() {
               className={
                 selectedMenuItem === "washList" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  local_laundry_service
-                </span>
-              }
+              icon={<span className="material-symbols-outlined sidebar-icon">local_laundry_service</span>}
               onClick={() => handleMenuItemClick("washList")}
             >
               Washing List
@@ -126,22 +102,15 @@ function SidebarComp() {
               className={
                 selectedMenuItem === "users" ? "selected-menu-item" : ""
               }
-              icon={
-                <span className="material-symbols-outlined sidebar-icon">
-                  group
-                </span>
-              }
+              icon={<span className="material-symbols-outlined sidebar-icon">group</span>}
               onClick={() => handleMenuItemClick("users")}
             >
               Users
             </MenuItem>
           </div>
-
-          {/* Theme Toggle */}
-       
         </Menu>
       </Sidebar>
-    </>
+    </div>
   );
 }
 

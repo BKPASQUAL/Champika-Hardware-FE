@@ -1,0 +1,25 @@
+/* .table>:not(caption)>*>* {
+    padding: .5rem .5rem;
+    background-color: var(--bs-table-color-state, var(--bs-table-color-type, #eef7f8));
+    border-bottom-width: var(--bs-border-width);
+    box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, #c13a3a00));
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-color-type: #ffffff;
+    --bs-table-bg-type: rgba(255, 255, 255, 0.05);
+    color: black;
+} */
+
+.table {
+    width: 94% !important;
+    margin-top: 0;
+
+}
+.table-fixed thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Add your desired background color */
+    z-index: 1;
+  }
+  

@@ -1,16 +1,15 @@
-import React from 'react'
-import Navbar from '../components/common/Navbar'
+import React from "react";
+import Navbar from "../components/common/Navbar";
 
 function Overview() {
   return (
     <>
-    <Navbar/>
-     <div>
-      
+      <Navbar title="Overview"/>
+      <div>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>
     </>
-   
-  )
+  );
 }
 
-export default Overview
+export default Overview;
