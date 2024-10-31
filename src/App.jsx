@@ -3,6 +3,7 @@ import Home from "./components/common/home";
 import Overview from "./pages/Overview";
 import Products from "./pages/Products";
 import Custormers from "./pages/Custormers";
+import Suppliers from "./pages/Suppliers";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="Overview" element={<Overview />} />
         <Route path="products" element={<Products />} />
         <Route path="custormers" element={<Custormers />} />
+        <Route path="suppliers" element={<Suppliers />} />
  
       </Route>
     </Routes>

@@ -7,7 +7,7 @@ function Home() {
     <div
       style={{
         display: "flex",
-        height: "98vh",
+        height: "100vh",
         overflow: "hidden",
         background:"#F8F9FD"
       }}
