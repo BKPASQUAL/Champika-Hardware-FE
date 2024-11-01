@@ -9,39 +9,59 @@ const data = ["Eugenia", "Bryan", "Linda", "Nancy", "Lloyd", "Alice"].map(
   (item) => ({ label: item, value: item })
 );
 
-function Custormers() {
-  const [isRetail, setIsRetail] = useState(true); // Set initial state to Retail
+function Category() {
+  const [selectedOption, setSelectedOption] = useState("Item"); // Set initial state to "Retail"
 
-  const handleToggle = (selectedOption) => {
-    setIsRetail(selectedOption === "Distribute"); // Toggle based on selected option
+  const handleToggle = (option) => {
+    setSelectedOption(option); // Update state based on selected option
   };
 
   return (
-    <div className="overflow-hidden h-screen"> 
-      <Navbar title="Custormers" />
-      <div className="flex flex-col p-6 ">
+    <div >
+      <Navbar title="Categories" />
+      <div className="flex flex-col p-6">
         <div className="h-20 bg-white rounded-lg flex flex-row items-center justify-between mb-2">
-          <div className="flex ">
+          <div className="flex">
             <div className="flex flex-row items-center ml-5 border border-gray-300 rounded-md overflow-hidden">
               <button
-                onClick={() => handleToggle("Distribute")}
+                onClick={() => handleToggle("Item")}
                 className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
-                  isRetail
+                  selectedOption === "Ite m"
                     ? "bg-blue-600 text-white"
                     : "bg-white text-gray-600 hover:bg-gray-100"
                 }`}
               >
-                Distribute
+                Item
               </button>
               <button
                 onClick={() => handleToggle("Retail")}
                 className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
-                  !isRetail
+                  selectedOption === "Retail"
                     ? "bg-blue-600 text-white"
                     : "bg-white text-gray-600 hover:bg-gray-100"
                 }`}
               >
-                Retail
+                Customer
+              </button>
+              <button
+                onClick={() => handleToggle("Area")}
+                className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
+                  selectedOption === "Area"
+                    ? "bg-blue-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-gray-100"
+                }`}
+              >
+                Area
+              </button>
+              <button
+                onClick={() => handleToggle("Location")}
+                className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
+                  selectedOption === "Location"
+                    ? "bg-blue-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-gray-100"
+                }`}
+              >
+                Location
               </button>
             </div>
 
@@ -59,7 +79,7 @@ function Custormers() {
               className="min-w-52 flex items-center cursor-pointer"
               onClick={() => navigate("/home/newOrder")}
             >
-              <span className="material-symbols-outlined sidebar-icon text-lg font-medium text-txtdarkblue mr-3 ">
+              <span className="material-symbols-outlined sidebar-icon text-lg font-medium text-txtdarkblue mr-3">
                 add_circle
               </span>
               <p className="text-lg font-medium text-txtdarkblue">
@@ -70,8 +90,8 @@ function Custormers() {
         </div>
 
         <div>
-          {/* Conditionally show the CustormerTable based on the toggle */}
-          {isRetail ? (
+          {/* Conditionally render the CustomerTable based on selected option */}
+          {selectedOption === "Item" ? (
             <div className="bg-white h-96 rounded-md mt-8 flex flex-col">
               <p className="text-lg p-5 font-medium">
                 Distribute Customers | 20
@@ -94,4 +114,4 @@ function Custormers() {
   );
 }
 
-export default Custormers;
+export default Category;

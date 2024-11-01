@@ -23,9 +23,9 @@ function Products() {
     <>
       <Navbar title="Products" />
       <div className="flex flex-col p-6 ">
-        <div className="h-20 bg-white rounded-2lg flex flex-row items-center justify-between mb-8">
+        <div className="h-20 bg-white rounded-lg flex flex-row items-center justify-between mb-8">
           <div>
-            <InputGroup inside style={{ width: 350 }} className="ml-14">
+            <InputGroup inside style={{ width: 350 }} className="ml-4">
               <Input  placeholder="Seract here"/>
               <InputGroup.Button>
                 <SearchIcon />

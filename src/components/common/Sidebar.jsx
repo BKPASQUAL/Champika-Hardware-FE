@@ -89,12 +89,23 @@ function SidebarComp() {
           <div className="sidebar-link">
             <MenuItem
               className={
-                selectedMenuItem === "washList" ? "selected-menu-item" : ""
+                selectedMenuItem === "invoice" ? "selected-menu-item" : ""
               }
               icon={<span className="material-symbols-outlined sidebar-icon">local_laundry_service</span>}
-              onClick={() => handleMenuItemClick("washList")}
+              onClick={() => handleMenuItemClick("invoice")}
             >
-              Washing List
+              Invoice
+            </MenuItem>
+          </div>
+          <div className="sidebar-link">
+            <MenuItem
+              className={
+                selectedMenuItem === "category" ? "selected-menu-item" : ""
+              }
+              icon={<span className="material-symbols-outlined sidebar-icon">group</span>}
+              onClick={() => handleMenuItemClick("category")}
+            >
+              Categories
             </MenuItem>
           </div>
           <div className="sidebar-link">

@@ -16,49 +16,49 @@ function ProductsTable() {
         }}
         style={{ width: "100%" }}
       >
-        <Column flexGrow={1} align="center">
+        <Column flexGrow={2} align="center">
           <HeaderCell className="bg-gray-200 text-gray-700">Code</HeaderCell>
           <Cell dataKey="id" />
         </Column>
 
-        <Column flexGrow={2}>
+        <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Product Name
           </HeaderCell>
           <Cell dataKey="firstName" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">MRP</HeaderCell>
           <Cell dataKey="lastName" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">10%</HeaderCell>
           <Cell dataKey="gender" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">15%</HeaderCell>
           <Cell dataKey="gender" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">20%</HeaderCell>
           <Cell dataKey="age" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">25%</HeaderCell>
           <Cell dataKey="postcode" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">30%</HeaderCell>
           <Cell dataKey="email" />
         </Column>
 
-        <Column flexGrow={1}>
+        <Column flexGrow={2}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             SELLING PRICE
           </HeaderCell>

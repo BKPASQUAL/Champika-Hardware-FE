@@ -9,7 +9,7 @@ function CustormerTable() {
   return (
     <div>
       <Table
-        height={570}
+        height={550}
         data={data}
         onRowClick={(rowData) => {
           console.log(rowData);
