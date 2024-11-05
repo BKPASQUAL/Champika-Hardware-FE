@@ -10,14 +10,14 @@ const data = ["Eugenia", "Bryan", "Linda", "Nancy", "Lloyd", "Alice"].map(
 );
 
 function Category() {
-  const [selectedOption, setSelectedOption] = useState("Item"); // Set initial state to "Retail"
+  const [selectedOption, setSelectedOption] = useState("Item"); // Set initial state to "Item"
 
   const handleToggle = (option) => {
     setSelectedOption(option); // Update state based on selected option
   };
 
   return (
-    <div >
+    <div>
       <Navbar title="Categories" />
       <div className="flex flex-col p-6">
         <div className="h-20 bg-white rounded-lg flex flex-row items-center justify-between mb-2">
@@ -26,7 +26,7 @@ function Category() {
               <button
                 onClick={() => handleToggle("Item")}
                 className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
-                  selectedOption === "Ite m"
+                  selectedOption === "Item"
                     ? "bg-blue-600 text-white"
                     : "bg-white text-gray-600 hover:bg-gray-100"
                 }`}
@@ -34,9 +34,9 @@ function Category() {
                 Item
               </button>
               <button
-                onClick={() => handleToggle("Retail")}
+                onClick={() => handleToggle("Customer")}
                 className={`w-24 py-2 text-sm font-semibold transition-colors duration-200 ${
-                  selectedOption === "Retail"
+                  selectedOption === "Customer"
                     ? "bg-blue-600 text-white"
                     : "bg-white text-gray-600 hover:bg-gray-100"
                 }`}
@@ -90,21 +90,44 @@ function Category() {
         </div>
 
         <div>
-          {/* Conditionally render the CustomerTable based on selected option */}
-          {selectedOption === "Item" ? (
+          {/* Conditionally render tables based on selected option */}
+          {selectedOption === "Item" && (
             <div className="bg-white h-96 rounded-md mt-8 flex flex-col">
               <p className="text-lg p-5 font-medium">
-                Distribute Customers | 20
+                Item Customers | 20
               </p>
               <div className="flex-grow">
                 <CustormerTable />
               </div>
             </div>
-          ) : (
+          )}
+          {selectedOption === "Customer" && (
             <div className="bg-white h-96 rounded-md mt-8 flex flex-col">
-              <p className="text-lg p-5 font-medium">Retail Customers | 30</p>
+              <p className="text-lg p-5 font-medium">
+                Customer Customers | 30
+              </p>
               <div className="flex-grow">
-                <CustormerTable />
+                {/* Add Customer-specific table component here */}
+              </div>
+            </div>
+          )}
+          {selectedOption === "Area" && (
+            <div className="bg-white h-96 rounded-md mt-8 flex flex-col">
+              <p className="text-lg p-5 font-medium">
+                Area Customers | 30
+              </p>
+              <div className="flex-grow">
+                {/* Add Area-specific table component here */}
+              </div>
+            </div>
+          )}
+          {selectedOption === "Location" && (
+            <div className="bg-white h-96 rounded-md mt-8 flex flex-col">
+              <p className="text-lg p-5 font-medium">
+                Location Customers | 30
+              </p>
+              <div className="flex-grow">
+                {/* Add Location-specific table component here */}
               </div>
             </div>
           )}
