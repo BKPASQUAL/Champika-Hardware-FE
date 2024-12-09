@@ -7,6 +7,7 @@ import Suppliers from "./pages/Suppliers";
 import MakeInvoice from "./pages/MakeInvoice";
 import Invoice from "./pages/Invoice";
 import Category from "./pages/Category";
+import Learn from "./pages/Learn";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="makeInvoice" element={<MakeInvoice />} />
         <Route path="invoice" element={<Invoice />} />
         <Route path="category" element={<Category />} />
+        <Route path="Learn" element={<Learn />} />
       </Route>
     </Routes>
   );
