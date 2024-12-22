@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Modal, Button, Divider } from "rsuite";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
 function AddNewProduct({ open, onClose }) {
