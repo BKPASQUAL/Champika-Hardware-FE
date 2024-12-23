@@ -3,8 +3,8 @@ import Navbar from "../components/common/Navbar";
 import { Input, InputGroup, Row } from "rsuite";
 import SearchIcon from "@rsuite/icons/Search";
 import { InputPicker } from "rsuite";
-import CustormerTable from "../components/tables/CustormerTable";
 import AddSuppliers from "../components/model/AddSuppliers";
+import SuppliersTable from "../components/tables/SuppliersTable";
 
 const data = ["Eugenia", "Bryan", "Linda", "Nancy", "Lloyd", "Alice"].map(
   (item) => ({ label: item, value: item })
@@ -45,7 +45,7 @@ function Suppliers() {
           </div>
         </div>
         <div>
-          <CustormerTable />
+          <SuppliersTable />
         </div>
       </div>
       <AddSuppliers open={open} handleClose={handleClose} />

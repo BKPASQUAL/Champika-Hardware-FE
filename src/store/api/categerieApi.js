@@ -11,11 +11,11 @@ export const categoriesApi = api.injectEndpoints({
       }),
     }),
 
-    getAllCategories: builder.query({
-      query: () => "categories/getAllCategories",
+    getAllSuppliers: builder.query({
+      query: () => "categories/getAllSuppliers",
     }),
   }),
 });
 
-export const { useAddCategoriesMutation, useGetAllCategoriesQuery } =
+export const { useAddCategoriesMutation, useGetAllSuppliersQuery } =
   categoriesApi;
