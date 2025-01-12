@@ -6,7 +6,7 @@ function Navbar({ title }) {
 
   return (
     <div className="flex justify-between mx-10 h-20 items-center">
-      <div className="text-2xl font-bold">{title} | 10</div>
+      <div className="text-2xl font-bold">{title} | 20</div>
       <div className="flex items-center">
         <button
           className="border border-blue-600 text-blue-600 px-5 py-2 rounded-lg transition-colors duration-300 hover:bg-blue-600 hover:text-white mr-20"
