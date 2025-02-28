@@ -76,7 +76,6 @@ function MakeInvoice() {
           </Box>
         </div>
 
-        {/* Total Summary */}
         <div className="w-1/2 h-auto p-6 bg-white rounded-lg shadow flex flex-col space-y-4">
           <Box className="flex items-center">
             <Typography className="text-gray-600 w-32">

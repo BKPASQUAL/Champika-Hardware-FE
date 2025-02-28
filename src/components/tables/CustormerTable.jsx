@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Button } from "rsuite";
+import { Table } from "rsuite";
 import mockUsers from "../../assets/mocks/ProductMocks";
 
 const { Column, HeaderCell, Cell } = Table;
