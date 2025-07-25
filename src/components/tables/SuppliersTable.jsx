@@ -8,11 +8,22 @@ function SuppliersTable() {
   const { data: SupplierData } = useGetAllSuppliersQuery();
   console.log(SupplierData);
 
+  // Add these handler functions or import them if they exist elsewhere
+  const handleEditItem = (rowData) => {
+    console.log("Edit item:", rowData);
+    // Add your edit logic here
+  };
+
+  const handleDeleteOpen = (supplierId) => {
+    console.log("Delete item:", supplierId);
+    // Add your delete logic here
+  };
+
   return (
     <div>
       <Table
         height={650}
-        data={SupplierData?.payload || []} 
+        data={SupplierData || []}
         onRowClick={(rowData) => {
           console.log(rowData);
         }}
@@ -20,49 +31,50 @@ function SuppliersTable() {
       >
         <Column flexGrow={1} align="center">
           <HeaderCell className="bg-gray-200 text-gray-700">Code</HeaderCell>
-          <Cell dataKey="id" />
+          <Cell dataKey="supplier_id" />
         </Column>
 
         <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Supplier Name
           </HeaderCell>
-          <Cell dataKey="supplierName" />
+          <Cell dataKey="supplier_name" />
         </Column>
 
-        {/* <Column flexGrow={3}>
+        {/* Uncommented description and address columns with correct dataKeys */}
+        <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Description
           </HeaderCell>
           <Cell dataKey="description" />
-        </Column> */}
+        </Column>
 
-        {/* <Column flexGrow={3}>
+        <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Address
           </HeaderCell>
           <Cell dataKey="address" />
-        </Column> */}
+        </Column>
 
         <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Contact No
           </HeaderCell>
-          <Cell dataKey="phoneNumber" />
+          <Cell dataKey="phone_number" />
         </Column>
 
         <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Rep Name
           </HeaderCell>
-          <Cell dataKey="representativeName" />
+          <Cell dataKey="representative_name" />
         </Column>
 
         <Column flexGrow={3}>
           <HeaderCell className="bg-gray-200 text-gray-700">
             Rep Contact No
           </HeaderCell>
-          <Cell dataKey="representativeContact" />
+          <Cell dataKey="representative_contact" />
         </Column>
 
         <Column flexGrow={1}>
@@ -80,7 +92,7 @@ function SuppliersTable() {
                   className="material-symbols-outlined sidebar-icon text-lg font-medium text-red mr-3 cursor-pointer"
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleDeleteOpen(rowData.id);
+                    handleDeleteOpen(rowData.supplier_id);
                   }}
                 >
                   delete

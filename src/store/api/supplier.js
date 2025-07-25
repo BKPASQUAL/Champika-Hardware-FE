@@ -5,17 +5,19 @@ export const supliersApi = api.injectEndpoints({
   endpoints: (builder) => ({
     addSupplier: builder.mutation({
       query: (formData) => ({
-        url: "supplier",
+        url: "suppliers",
         method: "POST",
         body: formData,
       }),
     }),
 
     getAllSuppliers: builder.query({
-      query: () => "Supplier",
+      query: () => ({
+        url: "suppliers",
+        method: "GET",
+      }),
     }),
   }),
 });
 
-export const { useAddSupplierMutation, useGetAllSuppliersQuery } =
-  supliersApi;
+export const { useAddSupplierMutation, useGetAllSuppliersQuery } = supliersApi;
